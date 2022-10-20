@@ -1,0 +1,88 @@
+<!-- This code was written by Mohamad Amr Shehab -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IZI Bookmark</title>
+    <link rel="icon" href="Images/1200px-OOjs_UI_icon_bookmark.svg.png">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div class="home m-5">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="head m-3">
+                        <h1 class="text-success fs-3 fw-bolder">IZI Bookmarker</h1>
+                        <hr>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    <div class="inputs overflow-auto text-center text-white bg-success m-3 rounded-3 ">
+                        <h3 class="my-4 text-warning fw-bolder">Bookmark your favorite sites</h3>
+                        <label for="siteName" class="bg-white rounded-2 text-success fw-bold px-3 py-1">Site
+                            Name</label>
+                        <input type="text" id="siteName" class="form-control w-75 m-auto my-3"
+                            placeholder="Bookmark Name">
+                        <div id="nameError" class="w-75 m-auto"></div>
+                        <label for="siteUrl" class="bg-white rounded-2 text-success fw-bold px-3 py-1">Site URL</label>
+                        <input type="text" id="siteUrl" class="form-control w-75 m-auto my-3"
+                            placeholder="Website URL start with https://">
+                        <div id="urlError" class="w-75 m-auto"></div>
+                        <button class="btn btn-warning my-4 fw-bold" id="submitdata"
+                            onclick="submitData()">Submit</button>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div class="newTable m-3">
+                        <hr>
+                        <input type="text" id="searchBtn" class="form-control border-1 bg-light mb-5 mt-3"
+                            onkeyup="search(this.value)" placeholder="Search for website name">
+                        <table class="table text-center table-striped">
+                            <thead class="">
+                                <tr>
+                                    <th>No.</th>
+                                    <th class="text-success">Website Name</th>
+                                    <th class="text-warning">Visit</th>
+                                    <th class="text-success">Update</th>
+                                    <th class="text-danger">Delete</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tbody">
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    <div class="footer m-3">
+                        <hr>
+                        <p class="text-secondary fw-bold">© 2022 Bookmarker izi.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
